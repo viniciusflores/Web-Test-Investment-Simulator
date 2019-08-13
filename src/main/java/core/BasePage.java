@@ -101,23 +101,12 @@ public class BasePage extends DriverFactory {
 			List<WebElement> elements = driver.findElements(by);
 			return elements.size() > 0;
 		} catch (Exception e) {
-			throw new NoSuchElementException("Element not found: " + e.getMessage());
+			return false;
 		}
 	}
 
 	public boolean existElementByText(String text) {
 		return existElement(By.xpath("//*[contains(.,'" + text + "')]"));
-	}
-
-	public boolean existElementWithReturn(By by) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, 15);
-			wait.until(ExpectedConditions.presenceOfElementLocated(by));
-			List<WebElement> elements = driver.findElements(by);
-			return elements.size() > 0;
-		} catch (Exception e) {
-			return false;
-		}
 	}
 
 	public void scrollToElement(By by) {
@@ -185,4 +174,7 @@ public class BasePage extends DriverFactory {
 		}
 	}
 
+	public void sendKeyTab(By by) {
+		driver.findElement(by).sendKeys(Keys.TAB);
+	}
 }
