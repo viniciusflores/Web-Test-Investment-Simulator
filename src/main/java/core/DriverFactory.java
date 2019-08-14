@@ -23,21 +23,23 @@ public class DriverFactory {
 	public static WebDriver createDriver(String browser) {
 		if (driver == null) {
 			try {
-				ChromeOptions options = new ChromeOptions();
-				FirefoxOptions optionsFirefox = new FirefoxOptions();
+				ChromeOptions chromeOptions = new ChromeOptions();
+				FirefoxOptions firefoxOptions = new FirefoxOptions();
 				switch (AutomationTypeEnum.valueOf(browser)) {
 				case CHROME:
 					WebDriverManager.chromedriver().setup();
-					options.addArguments("--window-size=1024,768");
-					options.addArguments("--start-maximized");
-					//options.addArguments("--headless");
-					driver = new ChromeDriver(options);
+					chromeOptions.addArguments("--window-size=1024,768");
+					chromeOptions.addArguments("--start-maximized");
+					chromeOptions.addArguments("--headless");
+					driver = new ChromeDriver(chromeOptions);
 					driver.get(Constants.URL);
 					break;
 				case FIREFOX:
 					WebDriverManager.firefoxdriver().setup();
-					optionsFirefox.addArguments("--headless");
-					driver = new FirefoxDriver(optionsFirefox);
+					firefoxOptions.addArguments("--window-size=1024,768");
+					firefoxOptions.addArguments("--start-maximized");
+					firefoxOptions.addArguments("--headless");
+					driver = new FirefoxDriver(firefoxOptions);
 					driver.get(Constants.URL);
 					break;
 
