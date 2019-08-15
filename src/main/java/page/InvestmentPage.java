@@ -14,7 +14,7 @@ import project_constants.TimeToInvestmentEnum;
 public class InvestmentPage extends BasePage {
 	public void submitInvestment(InvestmentProfileEnum type, String valueApply, String valueInvest, String time,
 			TimeToInvestmentEnum typeTime) {
-		scrollToElement(By.name("perfil"));
+		scroolToElementWithJS(By.name("perfil"));
 		selectProfile(type);
 		setApplyValue(valueApply);
 		setInvestValue(valueInvest);

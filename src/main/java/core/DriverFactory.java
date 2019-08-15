@@ -1,10 +1,13 @@
 package core;
 
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import project_constants.AutomationTypeEnum;
@@ -32,7 +35,6 @@ public class DriverFactory {
 					chromeOptions.addArguments("--start-maximized");
 					chromeOptions.addArguments("--headless");
 					driver = new ChromeDriver(chromeOptions);
-					driver.get(Constants.URL);
 					break;
 				case FIREFOX:
 					WebDriverManager.firefoxdriver().setup();
@@ -40,12 +42,29 @@ public class DriverFactory {
 					firefoxOptions.addArguments("--start-maximized");
 					firefoxOptions.addArguments("--headless");
 					driver = new FirefoxDriver(firefoxOptions);
-					driver.get(Constants.URL);
 					break;
-
+				case ANDROID:
+					chromeOptions.setCapability("device", "Samsung Galaxy S10");
+					chromeOptions.setCapability("os_version", "9.0");
+					chromeOptions.setCapability("realMobile", "true");
+					chromeOptions.setCapability("browserstack.video", "true");
+					chromeOptions.setCapability("browserstack.debug", "true");
+					chromeOptions.setCapability("browserName", "Chrome");
+					driver = new RemoteWebDriver(new URL(Constants.APPIUM), chromeOptions);
+					break;
+				case IPHONE:
+					chromeOptions.setCapability("device", "iPhone 8 Plus");
+					chromeOptions.setCapability("os_version", "11");
+					chromeOptions.setCapability("realMobile", "true");
+					chromeOptions.setCapability("browserstack.video", "true");
+					chromeOptions.setCapability("browserstack.debug", "true");
+					chromeOptions.setCapability("browserName", "Chrome");
+					driver = new RemoteWebDriver(new URL(Constants.APPIUM), chromeOptions);
+					break;
 				default:
 					break;
 				}
+				driver.get(Constants.URL);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

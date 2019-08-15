@@ -17,37 +17,26 @@ public class InvestmentTest extends BaseTest {
 	@DataProvider(name = "physicalWithMonths")
 	public static Object[][] physicalWithMonths() {
 		return new Object[][] {
-				{ InvestmentProfileEnum.PHYSICAL_PERSON, "100000", "10000", "6", TimeToInvestmentEnum.MONTHS } };
+				{ InvestmentProfileEnum.PHYSICAL_PERSON, "100000", "40000", "6", TimeToInvestmentEnum.MONTHS } };
 	}
 
 	@DataProvider(name = "physicalWithYears")
 	public static Object[][] physicalWithYears() {
 		return new Object[][] {
-				{ InvestmentProfileEnum.PHYSICAL_PERSON, "100000", "10000", "6", TimeToInvestmentEnum.YEARS } };
+				{ InvestmentProfileEnum.PHYSICAL_PERSON, "200000", "30000", "3", TimeToInvestmentEnum.YEARS } };
 	}
 
 	@DataProvider(name = "legalWithMonths")
 	public static Object[][] legalWithMonths() {
 		return new Object[][] {
-				{ InvestmentProfileEnum.LEGAL_ENTITY, "100000", "10000", "6", TimeToInvestmentEnum.MONTHS } };
+				{ InvestmentProfileEnum.LEGAL_ENTITY, "300000", "20000", "12", TimeToInvestmentEnum.MONTHS } };
 	}
 
 	@DataProvider(name = "legalWithYears")
 	public static Object[][] legalWithYears() {
 		return new Object[][] {
-				{ InvestmentProfileEnum.LEGAL_ENTITY, "100000", "10000", "6", TimeToInvestmentEnum.YEARS } };
+				{ InvestmentProfileEnum.LEGAL_ENTITY, "400000", "10000", "10", TimeToInvestmentEnum.YEARS } };
 	}
-	/*
-	@DataProvider(name = "legalWithYears")
-	public static Object[][] legalWithYears() {
-		return new Object[][] {
-			{ InvestmentProfileEnum.PHYSICAL_PERSON, "100000", "10000", "6", TimeToInvestmentEnum.MONTHS },
-			{ InvestmentProfileEnum.PHYSICAL_PERSON, "100000", "10000", "6", TimeToInvestmentEnum.YEARS },
-			{ InvestmentProfileEnum.LEGAL_ENTITY, "100000", "10000", "6", TimeToInvestmentEnum.MONTHS },
-			{ InvestmentProfileEnum.LEGAL_ENTITY, "100000", "10000", "6", TimeToInvestmentEnum.YEARS } 
-				
-		};
-	}*/
 
 	@Test(dataProvider = "physicalWithMonths")
 	public void submitInvestimentPhysicalWithMonths(InvestmentProfileEnum profile, String applyValue,
@@ -57,7 +46,7 @@ public class InvestmentTest extends BaseTest {
 		String[] resultTime = page.validateTimeByTimeType(time, typeTime);
 		assertEquals(page.getValueOfInvestmentTime(), resultTime);
 	}
-	
+
 	@Test(dataProvider = "physicalWithYears")
 	public void submitInvestimentPhysicalWithYears(InvestmentProfileEnum profile, String applyValue, String investValue,
 			String time, TimeToInvestmentEnum typeTime) {

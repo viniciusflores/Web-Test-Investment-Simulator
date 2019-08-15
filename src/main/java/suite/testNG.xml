@@ -3,9 +3,22 @@
 	<test name="CHROME tests">
 		<parameter name="browser" value="CHROME" />
 		<classes>
-			<class name="test.InvestmentTest" />
+		 	<class name="test.InvestmentTest" />
 			<class name="test.InvestmentFieldsTest" />
 		</classes>
 	</test>
-	
+	<test name="FIREFOX tests">
+		<parameter name="browser" value="FIREFOX" />
+		<classes>
+		 	<class name="test.InvestmentTest" />
+			<class name="test.InvestmentFieldsTest" />
+		</classes>
+	</test>
+	<test name="ANDROID tests">
+		<parameter name="browser" value="ANDROID" />
+		<classes>
+		 	<class name="test.InvestmentTest" />
+			<class name="test.InvestmentFieldsTest" />
+		</classes>
+	</test> 
 </suite>
