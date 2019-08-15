@@ -54,6 +54,11 @@
 			<artifactId>browserstack-local-java</artifactId>
 			<version>0.1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.1.5</version>
+		</dependency>
 	</dependencies>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>

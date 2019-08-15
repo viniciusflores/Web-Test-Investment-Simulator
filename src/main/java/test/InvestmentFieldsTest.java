@@ -8,6 +8,11 @@ import org.testng.annotations.Test;
 import core.BaseTest;
 import page.InvestmentPage;
 
+/**
+ * 
+ * @author vinicius.flores
+ *
+ */
 public class InvestmentFieldsTest extends BaseTest {
 	private InvestmentPage page = new InvestmentPage();
 

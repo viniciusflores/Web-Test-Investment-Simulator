@@ -11,6 +11,11 @@ import core.BasePage;
 import project_constants.InvestmentProfileEnum;
 import project_constants.TimeToInvestmentEnum;
 
+/**
+ * 
+ * @author vinicius.flores
+ *
+ */
 public class InvestmentPage extends BasePage {
 	public void submitInvestment(InvestmentProfileEnum type, String valueApply, String valueInvest, String time,
 			TimeToInvestmentEnum typeTime) {

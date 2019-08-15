@@ -13,6 +13,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import project_constants.AutomationTypeEnum;
 import project_constants.Constants;
 
+
+/**
+ * 
+ * @author vinicius.flores
+ *
+ */
 public class DriverFactory {
 	protected static WebDriver driver;
 

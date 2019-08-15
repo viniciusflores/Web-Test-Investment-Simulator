@@ -11,6 +11,11 @@ import page.InvestmentPage;
 import project_constants.InvestmentProfileEnum;
 import project_constants.TimeToInvestmentEnum;
 
+/**
+ * 
+ * @author vinicius.flores
+ *
+ */
 public class InvestmentTest extends BaseTest {
 	private InvestmentPage page = new InvestmentPage();
 

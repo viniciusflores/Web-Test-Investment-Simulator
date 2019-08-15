@@ -1,5 +1,10 @@
 package project_constants;
 
+/**
+ * 
+ * @author vinicius.flores
+ *
+ */
 public enum TimeToInvestmentEnum {
 	MONTHS("MESES"), YEARS("ANOS");
 	
