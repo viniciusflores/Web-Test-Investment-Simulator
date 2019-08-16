@@ -17,13 +17,17 @@ To change the browser Selenium will launch, edit the file
 `src/main/java/suite/testNG.xml` changing the value of the name parameter 'browser'.
 
 
-To run mobile tests, Selenium will need to connect to xx, the following credentials will be used. 
-In this suite, it was configured to run on a Samnsung xx and an iphone xxx. 
-Where they can be changed in the directory xxxx
+To run mobile tests, Selenium will need to connect to BrowserStack, the following credentials will be used. 
+In this suite, it was configured to run on a Samsung Galaxy S10 and an iPhone 8 Plus. 
+Where they can be changed in the directory core.DriverFactory.
+Note that the project is easily scalable to add new browsers and smartphones.
 
 In addition the BrowserStack tool allows a complete monitoring of the application on the device.
 To have access to this data is necessary to access the site https://automate.browserstack.com/, 
 with the credentials mentioned to accompany the various logs and test execution.
+User: 'sicrediinvestmentsimulator@gmail.com'
+Password : 'Sicredi2019'
+
 
 ### Project
 

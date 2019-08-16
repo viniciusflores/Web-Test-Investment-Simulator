@@ -24,4 +24,11 @@
 			<class name="test.InvestmentFieldsTest" />
 		</classes>
 	</test>
+	<test name="IPHONE tests">
+		<parameter name="browser" value="IPHONE" />
+		<classes>
+			<class name="test.InvestmentTest" />
+			<class name="test.InvestmentFieldsTest" />
+		</classes>
+	</test>
 </suite>
