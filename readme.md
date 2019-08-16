@@ -25,8 +25,9 @@ Note that the project is easily scalable to add new browsers and smartphones.
 In addition the BrowserStack tool allows a complete monitoring of the application on the device.
 To have access to this data is necessary to access the site https://automate.browserstack.com/, 
 with the credentials mentioned to accompany the various logs and test execution.
-User: 'sicrediinvestmentsimulator@gmail.com'
-Password : 'Sicredi2019'
+
+BrowserStack User: 'sicrediinvestmentsimulator@gmail.com'
+BrowserStack Password : 'Sicredi2019'
 
 
 ### Project
